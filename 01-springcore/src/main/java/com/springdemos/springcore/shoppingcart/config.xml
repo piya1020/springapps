@@ -8,18 +8,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean name="location" 
-    	class="com.springdemos.springcore.properties.Locations">
+    <bean name="items" class="com.springdemos.springcore.shoppingcart.Items"
     
-	   	
-			<property name="dialect">
-				<props>
-					<prop key="India">Hindi</prop>
-					<prop key="USA">English</prop>
-					<prop key="Canada">French</prop>
-					
-				</props>
-			</property>
-  	</bean>
+	p:id="1" 
+	p:itemName="Sports Shoe"
+	p:price="2200" 
+	p:quantity="1"/>
+	
+	<bean name="shoppingcart" class="com.springdemos.springcore.shoppingcart.ShoppingCart"
+		p:customerName="Priya">
+		<property name="items">
+			<ref bean="items"></ref>
+		</property>
+	</bean>
+
+
     
   </beans>

@@ -8,18 +8,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean name="location" 
-    	class="com.springdemos.springcore.properties.Locations">
-    
-	   	
-			<property name="dialect">
-				<props>
-					<prop key="India">Hindi</prop>
-					<prop key="USA">English</prop>
-					<prop key="Canada">French</prop>
-					
-				</props>
-			</property>
-  	</bean>
+    <bean name="scores"
+		class="com.springdemos.springcore.reftypes.Scores" p:math="80"
+		p:physics="90" p:chemistry="82" />
+
+	<bean name="student"
+		class="com.springdemos.springcore.reftypes.Student">
+		<property name="scores">
+			<ref bean="scores" />
+		</property>
+	</bean>
+
+
     
   </beans>
