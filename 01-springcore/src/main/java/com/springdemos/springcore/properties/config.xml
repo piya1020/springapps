@@ -8,13 +8,17 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean name="emp" 
-    	class="com.springdemos.springcore.dibasic.Employee" 
-    	p:id="99" 
-    	p:name="Siya"
-    	/>
+    <bean name="location" 
+    	class="com.springdemos.springcore.properties.Locations">
     
-   
-  
+	   	
+			<property name="dialect">
+				<props>
+					<prop key="USA">English</prop>
+					<prop key="Canada">French</prop>
+					<prop key="India">Hindi</prop>
+				</props>
+			</property>
+  	</bean>
     
   </beans>

@@ -8,13 +8,20 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
     
-    <bean name="emp" 
-    	class="com.springdemos.springcore.dibasic.Employee" 
-    	p:id="99" 
-    	p:name="Siya"
-    	/>
+    <bean name="cardealer" 
+    	class="com.springdemos.springcore.set.CarDealer">
     
-   
-  
+	   		<property name="name">
+				<value>ABC Motors LTD.</value>
+			</property>
+			<property name="models">
+				<set>
+					<value>Hyundai</value>
+					<value>BMW</value>
+					<value>AUDI</value>
+					<value>BMW</value>
+				</set>
+			</property>
+  	</bean>
     
   </beans>
