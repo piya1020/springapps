@@ -1,5 +1,4 @@
-package com.springdemos.springcore.stereotype.annotations;
-//package com.springdemos.springcore.interfaceinjection;
+package com.springdemos.springcore.interfaceinjection;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
@@ -18,7 +17,6 @@ public static void main(String[] args) {
 
 		// print the bean
 		System.out.println(coach);
-		
-	}
+}	
 
 }

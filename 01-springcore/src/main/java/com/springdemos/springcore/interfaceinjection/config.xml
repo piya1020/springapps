@@ -11,14 +11,7 @@
     http://www.springframework.org/schema/util
     http://www.springframework.org/schema/util/spring-util.xsd">
 
-	<context:component-scan base-package="com.springdemos.springcore.stereotype.annotations" />
+	<context:component-scan base-package="com.springdemos.springcore.interfaceinjection" />
 
-	<context:property-placeholder
-		location="com/springdemos/springcore/stereotype/annotations/db.properties" />
-		
-	<util:list list-class="java.util.LinkedList" id="topics">
-		<value>Java</value>
-		<value>Spring</value>
-		<value>Ruby</value>
-	</util:list>
+	
 </beans>
